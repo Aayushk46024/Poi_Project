@@ -17,6 +17,4 @@ public class LoginTest extends TestBase {
     public void logindetails() throws IOException {
         pageFactory.getLoginPage().login();
     }
-
-
 }
