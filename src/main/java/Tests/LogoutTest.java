@@ -5,17 +5,13 @@ import Pages.LogoutPage;
 import Testbase.TestBase;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class LogoutTest extends TestBase {
 
-    public LogoutTest()
-    {
-        super();
-    }
-
     @Test
-    public void logout()
-    {
-        LogoutPage obj = new LogoutPage();
-        obj.logout();
+    public void logout() throws IOException {
+        pageFactory.getLoginPage().login();
+        pageFactory.getLogoutPage().logout();
     }
 }

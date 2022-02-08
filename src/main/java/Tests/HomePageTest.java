@@ -2,17 +2,15 @@ package Tests;
 
 import Pages.AboutPage;
 import Pages.HomePage;
+import Testbase.TestBase;
 import org.testng.annotations.Test;
 
-public class HomePageTest {
-    public HomePageTest()
-    {
-        super();
-    }
+import java.io.IOException;
+
+public class HomePageTest extends TestBase {
     @Test
-    public void homePageTest()
-    {
-        HomePage obj = new HomePage();
-        obj.homePage();
+    public void homePageTest() throws IOException {
+        pageFactory.getLoginPage().login();
+        pageFactory.getHomePage().homePage();
     }
 }

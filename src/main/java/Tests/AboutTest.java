@@ -1,17 +1,16 @@
 package Tests;
 
 import Pages.AboutPage;
+import Testbase.TestBase;
 import org.testng.annotations.Test;
 
-public class AboutTest {
-    public AboutTest()
-    {
-        super();
-    }
+import java.io.IOException;
+
+public class AboutTest extends TestBase {
+
     @Test
-    public void about()
-    {
-        AboutPage obj = new AboutPage();
-        obj.about();
+    public void about() throws IOException {
+        pageFactory.getLoginPage().login();
+        pageFactory.getAboutPage().about();
     }
 }
