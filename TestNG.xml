@@ -11,5 +11,6 @@
             <class name="Tests.HomePageTest"></class>
             <class name="Tests.LogoutTest"></class>
         </classes>
+
     </test>
 </suite> <!-- Suite -->
